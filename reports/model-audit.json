@@ -1,0 +1,243 @@
+{
+  "coreml_partition_tested": false,
+  "ane_execution_verified": false,
+  "models": {
+    "depth.onnx": {
+      "inputs": [
+        {
+          "name": "rgb",
+          "shape": [
+            1,
+            3,
+            518,
+            518
+          ],
+          "dtype": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "points",
+          "shape": [
+            1,
+            518,
+            518,
+            3
+          ],
+          "dtype": 1
+        },
+        {
+          "name": "mask",
+          "shape": [
+            "Sigmoidmask_dim_0",
+            "Sigmoidmask_dim_1",
+            "Sigmoidmask_dim_2"
+          ],
+          "dtype": 1
+        },
+        {
+          "name": "metric_scale",
+          "shape": [
+            "Expmetric_scale_dim_0"
+          ],
+          "dtype": 1
+        }
+      ],
+      "operators": {
+        "Constant": 1050,
+        "Reciprocal": 2,
+        "Mul": 193,
+        "Pow": 4,
+        "Round": 2,
+        "Cast": 208,
+        "Unsqueeze": 178,
+        "Concat": 128,
+        "Resize": 7,
+        "Sub": 31,
+        "Div": 104,
+        "Conv": 58,
+        "Shape": 123,
+        "Slice": 81,
+        "Reshape": 161,
+        "Transpose": 123,
+        "Gather": 79,
+        "ConstantOfShape": 43,
+        "Equal": 8,
+        "Where": 7,
+        "Expand": 17,
+        "Add": 209,
+        "LayerNormalization": 52,
+        "MatMul": 144,
+        "Split": 25,
+        "Squeeze": 73,
+        "Sqrt": 72,
+        "Softmax": 24,
+        "Erf": 24,
+        "Mod": 5,
+        "ReduceSum": 1,
+        "Neg": 2,
+        "Range": 10,
+        "ConvTranspose": 9,
+        "Pad": 36,
+        "Relu": 26,
+        "Gemm": 3,
+        "Exp": 2,
+        "If": 1,
+        "Sigmoid": 1
+      },
+      "opsets": {
+        "": 18
+      },
+      "resize_antialias_nodes": [
+        "/model/encoder/Resize"
+      ],
+      "source": "/storage0/home/hezic/snapdragon8elite-gaussian/dist/snapdragon-stable-v3/models/depth.onnx"
+    },
+    "features.onnx": {
+      "inputs": [
+        {
+          "name": "rgb",
+          "shape": [
+            1,
+            3,
+            518,
+            518
+          ],
+          "dtype": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "spatial",
+          "shape": [
+            1,
+            1024,
+            32,
+            32
+          ],
+          "dtype": 1
+        },
+        {
+          "name": "basic",
+          "shape": [
+            1,
+            128,
+            129,
+            129
+          ],
+          "dtype": 1
+        }
+      ],
+      "operators": {
+        "Identity": 23,
+        "Sub": 28,
+        "Div": 98,
+        "Conv": 23,
+        "Shape": 149,
+        "Constant": 1265,
+        "Slice": 224,
+        "Concat": 151,
+        "Reshape": 52,
+        "Transpose": 122,
+        "ConstantOfShape": 2,
+        "Mul": 342,
+        "Equal": 2,
+        "Where": 2,
+        "Expand": 4,
+        "Unsqueeze": 191,
+        "Flatten": 2,
+        "Size": 1,
+        "Greater": 1,
+        "If": 2,
+        "Less": 1,
+        "Cast": 145,
+        "Tile": 1,
+        "Cos": 1,
+        "Sin": 1,
+        "LayerNormalization": 49,
+        "MatMul": 144,
+        "Add": 272,
+        "Split": 24,
+        "Squeeze": 72,
+        "Gather": 118,
+        "Neg": 48,
+        "Sqrt": 72,
+        "Softmax": 24,
+        "Erf": 24,
+        "InstanceNormalization": 21,
+        "Relu": 26,
+        "Resize": 4
+      },
+      "opsets": {
+        "": 18
+      },
+      "resize_antialias_nodes": [],
+      "source": "/storage0/home/hezic/snapdragon8elite-gaussian/reports/features-scaled-v5/features-scaled.onnx"
+    },
+    "head.onnx": {
+      "inputs": [
+        {
+          "name": "spatial",
+          "shape": [
+            1,
+            1024,
+            32,
+            32
+          ],
+          "dtype": 1
+        },
+        {
+          "name": "basic",
+          "shape": [
+            1,
+            128,
+            129,
+            129
+          ],
+          "dtype": 1
+        },
+        {
+          "name": "coords",
+          "shape": [
+            1,
+            1000,
+            2
+          ],
+          "dtype": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "delta",
+          "shape": [
+            1,
+            1000,
+            14
+          ],
+          "dtype": 1
+        }
+      ],
+      "operators": {
+        "Constant": 14,
+        "Clip": 1,
+        "Slice": 2,
+        "Unsqueeze": 2,
+        "GridSample": 2,
+        "Gather": 2,
+        "Transpose": 2,
+        "MatMul": 6,
+        "Add": 7,
+        "Concat": 1,
+        "Sigmoid": 1,
+        "Mul": 2,
+        "Sub": 1,
+        "Relu": 3
+      },
+      "opsets": {
+        "": 18
+      },
+      "resize_antialias_nodes": [],
+      "source": "/storage0/home/hezic/snapdragon8elite-gaussian/dist/snapdragon-stable-v3/models/head.onnx"
+    }
+  }
+}

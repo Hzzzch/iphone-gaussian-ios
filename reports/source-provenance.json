@@ -1,0 +1,15 @@
+{
+  "source": "Server/snapdragon8/v6/native",
+  "original_sha256": {
+    "include\\mobile_frontend.h": "2d14123172903988a43ed6523d86e2b9995d6d1c09ced5b1c8d0e104a2cd5630",
+    "include\\mobile_geometry.h": "014cad1ae3dc51e60cb1bd8fc853d7b2268802b81253c770dcf3dcc4a918399f",
+    "include\\mobile_onnx.h": "672857f7349c1ec02593bd58b141265be4c36dbf60938b948f836f7fcf1b1e4a",
+    "src\\mobile_frontend.cpp": "089ef532e0fda8135ef4fa750fd4e463a85b5a76891003d3b2b360af02389bcc",
+    "src\\mobile_geometry.cpp": "04c4717198de207235aec317bb955645be16c3224bd541c1e4651613bbf97d06",
+    "src\\mobile_onnx.cpp": "a91b1ae21a2c4c1b562f2e8850b2b28cad837d8efdeece0ad340c40831297562",
+    "src\\photo_pipeline.cpp": "af39ecf762fd5d654f061b5f745b6116a2f8b4df555fa954b7432b3d0f7c8e59",
+    "src\\photo_session_bench.cpp": "d186504e442b487fe2368cf52a59e68305dab6bae81b491e410b93c1300576ac",
+    "src\\preprocess.cpp": "51bc787d6b5afb7aa5a61a9ad373a8a389c175b29ccfc10bbe204758903e620d",
+    "src\\surface_sampler.cpp": "8aa446fecf1ddbf5aa4a9937b0248af7cba019d0bfc037b7c28f38003e97a2b3"
+  }
+}

@@ -1,0 +1,15 @@
+build*/
+models/
+*.xcworkspace/
+*.xcodeproj/
+Pods/
+DerivedData/
+*.ipa
+__pycache__/
+.DS_Store
+*.p12
+*.mobileprovision
+*.pem
+.env
+.env.*
+build-publication/

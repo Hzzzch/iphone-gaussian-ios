@@ -1,0 +1,17 @@
+{
+  "format": "mobilegs-ios-onnx-v1",
+  "files": {
+    "depth.onnx": {
+      "bytes": 1305439605,
+      "sha256": "23bb598cc737c0fe2e0952a6d00aa7c6a08a87d924293c0fcec6ea53eab9b1c9"
+    },
+    "features.onnx": {
+      "bytes": 1223385310,
+      "sha256": "02c90b82224fddf7f0af575884093ff0d463f762a5d06e34ceeef55ec268ac89"
+    },
+    "head.onnx": {
+      "bytes": 14243756,
+      "sha256": "056c4ba525d8406411a63b9b0967ed2a8df25f71f4d367a137b9b1c38a941c43"
+    }
+  }
+}

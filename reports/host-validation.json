@@ -1,0 +1,46 @@
+{
+  "host_tests_passed": true,
+  "comparisons": {
+    "rgb": {
+      "exact": true,
+      "relative_l2": 0.0
+    },
+    "depth": {
+      "exact": true,
+      "relative_l2": 0.0
+    },
+    "coords": {
+      "exact": true,
+      "relative_l2": 0.0
+    },
+    "areas": {
+      "exact": true,
+      "relative_l2": 0.0
+    },
+    "means": {
+      "exact": true,
+      "relative_l2": 0.0
+    },
+    "covariances": {
+      "exact": true,
+      "relative_l2": 0.0
+    },
+    "colors": {
+      "exact": true,
+      "relative_l2": 0.0
+    },
+    "opacities": {
+      "exact": true,
+      "relative_l2": 0.0
+    }
+  },
+  "ply_covariance_relative_l2": 1.4382026425729087e-07,
+  "backend_rejections": {
+    "coreml": "CoreML requested but this build does not enable it",
+    "htp": "iOS backend must be cpu, coreml, coreml-ane or coreml-gpu; QNN caches are not supported"
+  },
+  "ios_xcode_build_verified": false,
+  "ios_device_verified": false,
+  "coreml_partition_verified": false,
+  "ane_execution_verified": false
+}
