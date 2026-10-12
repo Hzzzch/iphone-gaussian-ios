@@ -1,13 +1,13 @@
 # GitHub 与 Mac 接续开发
 
-源码已上传到 [Hzzzch/iphone-gaussian-ios](https://github.com/Hzzzch/iphone-gaussian-ios)，分支为 `main`。**模型 Release 尚未上传**，目前请使用下方服务器下载方式。
+源码已上传到 [Hzzzch/iphone-gaussian-ios](https://github.com/Hzzzch/iphone-gaussian-ios)，分支为 `main`。完整模型位于 [models-onnx-scaled-v1 Release](https://github.com/Hzzzch/iphone-gaussian-ios/releases/tag/models-onnx-scaled-v1)。
 
 ## Mac 登录与获取源码
 
 Mac 的 SSH 密钥独立于 Windows，需要在 Mac 上另行配置或使用 GitHub CLI 的 HTTPS 登录。私钥不要放进项目。
 
 ```bash
-brew install xcodegen cocoapods python
+brew install gh xcodegen cocoapods python
 ssh -T git@github.com
 git clone git@github.com:Hzzzch/iphone-gaussian-ios.git
 cd iphone-gaussian-ios
@@ -17,23 +17,22 @@ cd iphone-gaussian-ios
 
 ## 模型
 
-三个完整 ONNX 合计约 2.54 GB，不纳入 Git 历史，不依赖 Git LFS。当前可从服务器获取，Mac 需要能访问内网并具备 SSH 登录权限：
+三个完整 ONNX 合计约 2.54 GB，作为 Release 附件保存，不纳入 Git 历史，不依赖 Git LFS。Mac 不需要连接内网服务器即可下载。先登录有仓库访问权限的 GitHub 账号：
+
+```bash
+gh auth login --hostname github.com --web
+python3 tools/fetch_models.py --repo Hzzzch/iphone-gaussian-ios
+```
+
+脚本按源码中固定清单核对大小和 SHA-256。失败时保留已下载文件，重试请用新的 `--out` 目录。
+
+下载结果在 `models/onnx-scaled-v1`。也可在 Release 页面手动下载三个 ONNX，放在同一文件夹中。`manifest.json` 和 `SHA256SUMS` 提供校验信息。原内网下载方式仍可使用：
 
 ```bash
 python3 tools/fetch_models.py --host hezic@10.15.88.93
 ```
 
-脚本按源码中固定清单核对大小和 SHA-256。失败时保留已下载文件，重试请用新的 `--out` 目录。
-
-未来发布 `models-onnx-scaled-v1` Release 后，可改为下列方式。目前该 Release 尚未上传，不要提前执行：
-
-```bash
-python3 tools/fetch_models.py --repo Hzzzch/iphone-gaussian-ios
-```
-
-若由用户在 GitHub 网页创建 Release：标签用 `models-onnx-scaled-v1`，上传 `depth.onnx`、`features.onnx`、`head.onnx`、`manifest.json` 四个附件；不要上传 Android 的 QNN 缓存。
-
-已校验的本地附件目录为 Windows 的 `D:\skd\codec\Server\iphone-ios\models\onnx-scaled-v1`。每个模型均小于 2 GiB，可分别作为附件上传。
+使用 `depth.onnx`、`features.onnx`、`head.onnx` 三个完整模型，不要用 Android 的 QNN 缓存替代。
 
 ## 构建
 

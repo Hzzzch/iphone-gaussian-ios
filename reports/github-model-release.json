@@ -1,0 +1,44 @@
+{
+  "date": "2026-10-12",
+  "release_id": 410315503,
+  "tag": "models-onnx-scaled-v1",
+  "url": "https://github.com/Hzzzch/iphone-gaussian-ios/releases/tag/models-onnx-scaled-v1",
+  "verification": "GitHub API asset byte counts and server-computed SHA256 match local manifest",
+  "assets": [
+    {
+      "name": "depth.onnx",
+      "bytes": 1305439605,
+      "sha256": "23bb598cc737c0fe2e0952a6d00aa7c6a08a87d924293c0fcec6ea53eab9b1c9",
+      "github_asset_id": 633029576,
+      "verified": true
+    },
+    {
+      "name": "features.onnx",
+      "bytes": 1223385310,
+      "sha256": "02c90b82224fddf7f0af575884093ff0d463f762a5d06e34ceeef55ec268ac89",
+      "github_asset_id": 633029575,
+      "verified": true
+    },
+    {
+      "name": "head.onnx",
+      "bytes": 14243756,
+      "sha256": "056c4ba525d8406411a63b9b0967ed2a8df25f71f4d367a137b9b1c38a941c43",
+      "github_asset_id": 633029592,
+      "verified": true
+    },
+    {
+      "name": "manifest.json",
+      "bytes": 467,
+      "sha256": "9b56023945fa9036c742d37f6867080eb11e3fd7ab996ca89dc144834771bdbd",
+      "github_asset_id": 633029593,
+      "verified": true
+    },
+    {
+      "name": "SHA256SUMS",
+      "bytes": 236,
+      "sha256": "e808a37f941c28f1975c58ef9c53a55a4e2d1a0f948f5bbc7ca659083b5a1d6a",
+      "github_asset_id": 633029599,
+      "verified": true
+    }
+  ]
+}

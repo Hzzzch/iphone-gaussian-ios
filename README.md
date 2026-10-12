@@ -16,6 +16,8 @@
 
 ## 模型在哪里
 
+完整模型已发布为 [GitHub Release 附件](https://github.com/Hzzzch/iphone-gaussian-ios/releases/tag/models-onnx-scaled-v1)。Mac 安装并登录 GitHub CLI 后，在项目目录执行 `python3 tools/fetch_models.py` 即可下载并逐一校验，无需连接内网服务器。详细步骤见 [GITHUB_SETUP.md](GITHUB_SETUP.md)。
+
 服务器 `10.15.88.93` 已准备并校验：
 
 ```text

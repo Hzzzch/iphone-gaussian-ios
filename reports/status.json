@@ -22,5 +22,6 @@
   "github_upload": "source_pushed_main",
   "github_preparation_date": "2026-10-12",
   "github_repository": "https://github.com/Hzzzch/iphone-gaussian-ios",
-  "github_model_release": "not_uploaded_requires_api_authorization_or_manual_upload"
+  "github_model_release": "published_and_all_asset_sizes_sha256_verified",
+  "github_model_release_url": "https://github.com/Hzzzch/iphone-gaussian-ios/releases/tag/models-onnx-scaled-v1"
 }
